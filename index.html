@@ -1,23 +1,92 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Frank's Web Dev Portfolio</title>
-  </head>
-  <body>
-    <h1>Frank's Web Dev Portfolio</h1>
-    <ul>
-      <li><a href="colmar_academy">Colmar Academy</a></li>
-      <li><a href="trackster">Trackster</a></li>
-      <li><a href="happy_birthday">Happy Birthday!</a></li>
-      <li><a href="jammming">Jammming</a></li>
-      <li><a href="ravenous">Ravenous</a></li>
-      <li><a href="Tea_Cozy">Tea Cozy</a></li>
-      <li><a href="MY_Times">MY Times</a></li>
-      <li><a href="broadway">Broadway</a></li>
-      <li><a href="excursion">Excursion</a></li>
-      <li><a href="restaurant_project">Dasmoto</a></li>
-      <li><a href="beach_paradise">Restaurant Project</a></li>
-    </ul>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hobbes179 — Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1>hobbes179</h1>
+      <p class="tagline">a growing collection of random builds</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <span class="filter-label">filter:</span>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-tag="all">all</button>
+        <!-- chips are generated from tags below -->
+      </div>
+    </div>
+
+    <!-- Project grid -->
+    <!-- ============================================================
+         TO ADD A PROJECT:
+         1. Copy a <article class="card"> block below.
+         2. Fill in the name, description, site href, repo href.
+         3. Set data-tags to one or more comma-separated lowercase tags.
+            Existing tags: finance, health, games
+            Add new tags freely — the filter bar updates automatically.
+         ============================================================ -->
+
+    <div class="grid" id="projectGrid">
+
+      <article class="card" data-tags="finance">
+        <div class="card-top">
+          <span class="tag-pill">finance</span>
+          <h2 class="card-title">Home Purchase Planner</h2>
+          <p class="card-desc">Budget and mortgage calculator to figure out what you can actually afford when buying a home.</p>
+        </div>
+        <div class="card-links">
+          <a href="https://hobbes179.github.io/Mortgage_Budgeter/" target="_blank" class="btn btn-site">↗ site</a>
+          <a href="https://github.com/hobbes179/Mortgage_Budgeter" target="_blank" class="btn btn-repo">{ } repo</a>
+        </div>
+      </article>
+
+      <article class="card" data-tags="health">
+        <div class="card-top">
+          <span class="tag-pill">health</span>
+          <h2 class="card-title">Stress Toolkit</h2>
+          <p class="card-desc">A collection of evidence-based tools and exercises for managing stress and anxiety.</p>
+        </div>
+        <div class="card-links">
+          <a href="https://stress-toolkit.streamlit.app/" target="_blank" class="btn btn-site">↗ site</a>
+          <a href="https://github.com/hobbes179/stress_toolkit" target="_blank" class="btn btn-repo">{ } repo</a>
+        </div>
+      </article>
+
+      <article class="card" data-tags="games">
+        <div class="card-top">
+          <span class="tag-pill">games</span>
+          <h2 class="card-title">Pokémon Smash or Pass</h2>
+          <p class="card-desc">The definitive answer to the question nobody asked. Rate every Pokémon one by one.</p>
+        </div>
+        <div class="card-links">
+          <a href="https://hobbes179.github.io/pokemon-smash-or-pass/" target="_blank" class="btn btn-site">↗ site</a>
+          <a href="https://github.com/hobbes179/pokemon-smash-or-pass" target="_blank" class="btn btn-repo">{ } repo</a>
+        </div>
+      </article>
+
+      <!-- ADD NEW CARDS ABOVE THIS LINE -->
+
+    </div>
+
+    <p class="empty-msg" id="emptyMsg" hidden>no projects match that filter.</p>
+  </main>
+
+  <footer>
+    <a href="https://github.com/hobbes179" target="_blank">github.com/hobbes179</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
